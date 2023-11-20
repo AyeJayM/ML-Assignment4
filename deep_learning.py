@@ -56,13 +56,13 @@ y_valid, y_train = y_train_full[:5000], y_train_full[5000:]
 # For instance, class_names[y_train[0]] = 'Coat'
 class_names = ["T-shirt/top", "Trouser", "Pullover", "Dress", "Coat", "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot"]
 
-n_hidden = [2, 5, 10]
-n_neurons = [10, 50, 100]
-l_rate = [0.01, 0.05, 0.1]
-
 bestAccuracyThusFar = 0
 bestModelThusFar = None
 bestParametersThusFar = None
+
+n_hidden = [2, 5, 10]
+n_neurons = [10, 50, 100]
+l_rate = [0.01, 0.05, 0.1]
 
 for h in n_hidden: #looking or the best parameters w.r.t the number of hidden layers
     for n in n_neurons: #looking or the best parameters w.r.t the number of neurons
