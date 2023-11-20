@@ -68,7 +68,8 @@ for h in n_hidden: #looking or the best parameters w.r.t the number of hidden la
     for n in n_neurons: #looking or the best parameters w.r.t the number of neurons
         for l in l_rate: #looking or the best parameters w.r.t the learning rate
 
-            #build the model for each combination by calling the function:
+            # Build the model for each combination by calling the function:
+            # We pass in "10" because there are 10 items in class_names
             model = build_model(h, n, 10, l)
 
             # To train the model:
