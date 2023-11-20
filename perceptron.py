@@ -44,8 +44,8 @@ perceptronParametersDict = {
        'shuffle': None
        }
 
-highest_mlp_accuracy = 0
-best_mlp_params = {
+highestAccuracyMLP = 0
+mlpParametersDict = {
        'learning_rate': None,
        'shuffle': None
        }
@@ -119,11 +119,11 @@ for learning_rate in n: #iterates over n
                         mlp_accuracy = mlp_correct / len(y_test)
                 
                         # If the calculated accuracy is higher than the previous calculated accuracy, we update our highest accuracy and print!
-                        if mlp_accuracy > highest_mlp_accuracy:
-                            highest_mlp_accuracy = mlp_accuracy
-                            best_mlp_params['learning_rate'] = learning_rate
-                            best_mlp_params['shuffle'] = shuffle
-                            print(f"Highest MLP accuracy so far: {highest_mlp_accuracy}, Parameters: learning rate={learning_rate}, shuffle={shuffle}\n")
+                        if mlp_accuracy > highestAccuracyMLP:
+                            highestAccuracyMLP = mlp_accuracy
+                            mlpParametersDict['learning_rate'] = learning_rate
+                            mlpParametersDict['shuffle'] = shuffle
+                            print(f"Highest MLP accuracy so far: {highestAccuracyMLP}, Parameters: learning rate={learning_rate}, shuffle={shuffle}\n")
                             
 
                     #make the classifier prediction for each test sample and start computing its accuracy
